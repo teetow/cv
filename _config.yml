@@ -1,0 +1,13 @@
+title: Johan Althoff - CV
+description: Professional CV and job application resources
+theme: jekyll-theme-minimal
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - cv.md
+  - cv_long.md
+  - linkedin_profile.md
+  - index.md

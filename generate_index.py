@@ -2,10 +2,18 @@
 # It was mostly written by a word guessing robot named Claude.
 
 import os
+import datetime
 
 current_dir = os.getcwd()
 excluded_files = ["README.md", "generate_index.py", "index.md"]
-index_content = "# Job Application Resources\n\n"
+index_content = """---
+layout: default
+title: Job Application Resources
+---
+
+## Available Documents
+
+"""
 
 presets = {
     "cv.md": "Curriculum Vitae",
@@ -71,7 +79,11 @@ for base_filename, file_versions in files_by_basename.items():
 
         index_content += " | ".join(links) + ")\n"
 
-index_content += "\nReach me at [jobs@teetow.com](mailto:jobs@teetow.com)!\n"
+index_content += "\nReach me at [jobs@teetow.com](mailto:jobs@teetow.com)!\n\n"
+
+# Add last updated date
+current_date = datetime.datetime.now().strftime("%B %Y")
+index_content += f"## Last Updated\n\n{current_date}\n"
 
 with open(os.path.join(current_dir, "index.md"), "w") as f:
     f.write(index_content)
