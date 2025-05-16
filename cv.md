@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Johan Althoff
 
 ## Senior Frontend Engineer with Design Focus

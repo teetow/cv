@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Extended Experience Details
 
 ## Self-employed (Quixel, Epic & MG)

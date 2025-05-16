@@ -1,13 +1,14 @@
 title: Johan Althoff - CV
 description: Professional CV and job application resources
 theme: jekyll-theme-minimal
+baseurl: "/cv"
+url: "https://teetow.com"
+markdown: kramdown
 plugins:
   - jekyll-relative-links
 relative_links:
   enabled: true
   collections: true
 include:
-  - cv.md
-  - cv_long.md
-  - linkedin_profile.md
-  - index.md
+  - "*.md"
+  - "*.pdf"

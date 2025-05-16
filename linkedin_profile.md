@@ -1,9 +1,13 @@
-# Johan Althoff
+---
+layout: default
+---
+
+# LinkedIn Profile: Johan Althoff
 
 **Senior Frontend Developer with Design Focus**  
-*He/Him*
+_He/Him_
 
-Located in Greater Uppsala Metropolitan Area  
+Located in Greater Uppsala Metropolitan Area
 [www.linkedin.com/in/teetow](https://www.linkedin.com/in/teetow)  
 366 connections
 
@@ -20,7 +24,7 @@ I helped found O3 Games (later Starbreeze Studios) in 1998. With a background as
 ### Senior Frontend Developer with Design Focus
 
 **Self-employed** · Full-time  
-*Jan 2019 - Present · 6 yrs 4 mos*  
+_Jan 2019 - Present · 6 yrs 4 mos_  
 Uppsala, Uppsala County, Sweden · On-site
 
 > "What if we just made the peg rounder?"
@@ -38,7 +42,7 @@ For my stint at Epic Games, I leveraged this experience in building a company-wi
 ### UI/UX Designer / Frontend Developer
 
 **Favro** · Full-time  
-*Jan 2017 - Jan 2019 · 2 yrs 1 mo*  
+_Jan 2017 - Jan 2019 · 2 yrs 1 mo_  
 Uppsala, Uppsala County, Sweden · On-site
 
 > "Can a meteor actually rise?"
@@ -52,7 +56,7 @@ As frontend development and UI/UX became my chief responsibility, I did the majo
 ### UI/UX Designer / Product Designer
 
 **Hansoft AB** · Full-time  
-*Apr 2012 - Dec 2016 · 4 yrs 9 mos*  
+_Apr 2012 - Dec 2016 · 4 yrs 9 mos_  
 Uppsala, Uppsala County, Sweden · On-site
 
 > "We might need an icon for that..."
@@ -66,7 +70,7 @@ As I traveled to speak to current and potential users, I identified the need for
 ### Lead Sound Designer / Tools Developer
 
 **Starbreeze** · Full-time  
-*Apr 2002 - Mar 2012 · 10 yrs*  
+_Apr 2002 - Mar 2012 · 10 yrs_  
 Uppsala, Uppsala County, Sweden · On-site
 
 > "You only ship once!"
@@ -90,7 +94,7 @@ At the time of my departure in 2012, I was leading an audio team of seven people
 ### Founder and Lead Sound Designer
 
 **O3 Games** · Full-time  
-*Jan 1998 - Jan 2002 · 4 yrs 1 mo*  
+_Jan 1998 - Jan 2002 · 4 yrs 1 mo_  
 Uppsala, Uppsala County, Sweden · On-site
 
 > "I bet we'll be done in nine months."
@@ -103,12 +107,12 @@ In 1997, I was one of the founders of a small games studio. One of eight full-ti
 
 ### Syndicate
 
-*Feb 2010 - Feb 2011*  
+_Feb 2010 - Feb 2011_  
 Associated with Starbreeze
 
 ### The Chronicles of Riddick: Escape from Butcher Bay
 
-*Jun 2003 - Oct 2003*  
+_Jun 2003 - Oct 2003_  
 Associated with Starbreeze
 
 One of the first truly successful movie license based games. Got better reviews than the actual movie and was a critically acclaimed success.
@@ -125,13 +129,13 @@ One of the first truly successful movie license based games. Got better reviews 
 
 **Volkan Akol**  
 Senior UI/UX Designer @ Epic  
-*February 10, 2011, Johan was senior to Volkan but didn't manage Volkan directly*
+_February 10, 2011, Johan was senior to Volkan but didn't manage Volkan directly_
 
 > I've had the pleasure to work with Johan during my time as the Sound QA at Starbreeze and I can only say good things about him. With his sharp mind for programming audio tools to make work flows more efficient and an awesome creativity for sound design, Johan is the guy that you would want in any team. By working with him I have learnt a lot about audio for games and how to improve work flows. Needless to say, Johan is really talented and I would recommend him any day.
 
 **Carl Starendal**  
 Leadership/Organisation/Product Development Expert and Entrepreneur  
-*April 18, 2010, Carl managed Johan directly*
+_April 18, 2010, Carl managed Johan directly_
 
 > I have had the pleasure of knowing Johan for many years, both working with him at the Starbreeze audio-team and as a musician and a friend. And he is a very multi-talented and highly skilled co-worker, one that will effortlessly switch between music production, video editing, sound design and tools-coding on your average workday. At the Starbreeze-team he is one of the founding fathers of the company, as well as one of our heavy-hitters when it comes to cutting edge sound design.
 
