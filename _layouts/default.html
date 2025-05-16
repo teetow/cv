@@ -3,12 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-    <meta name="description" content="{{ site.description }}">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>    <meta name="description" content="{{ site.description }}">
     <link rel="icon" href="{{ site.baseurl }}{{ site.favicon }}" type="image/svg+xml">
-    {% if site.theme %}
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-    {% endif %}
 </head>
 <body>
     <div class="container-lg px-3 my-5 markdown-body">
