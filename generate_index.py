@@ -19,6 +19,7 @@ presets = {
     "cv.md": "Curriculum Vitae",
     "cv_long.md": "Detailed Experience (Long CV)",
     "linkedin_profile.md": "LinkedIn Profile Dump",
+    "_config.yml": "Jekyll Configuration"
 }
 
 files_by_basename = {}
