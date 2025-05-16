@@ -5,14 +5,13 @@ import os
 import datetime
 import sys
 
-# Get the script directory for more reliable path resolution
 script_dir = os.path.dirname(os.path.abspath(__file__))
-repo_root = os.path.dirname(script_dir)  # Parent directory of scripts directory
+repo_root = os.path.dirname(script_dir)  # Parent directory
 
-# Use paths relative to the repository root
 public_dir = os.path.join(repo_root, "public")
-index_output_dir = repo_root  # Generated index.md will be in the repo root
+index_output_dir = repo_root
 excluded_files = ["README.md"]
+
 index_content = """---
 layout: default
 title: Job Application Resources
@@ -30,7 +29,6 @@ presets = {
 
 files_by_basename = {}
 
-# Check if public directory exists
 if not os.path.exists(public_dir):
     print(f"Error: public directory not found at {public_dir}")
     print(f"Script directory: {script_dir}")
@@ -38,16 +36,12 @@ if not os.path.exists(public_dir):
     exit(1)
 
 # Debug info for GitHub Actions
-if 'GITHUB_ACTIONS' in os.environ:
+if "GITHUB_ACTIONS" in os.environ:
     print(f"Running in GitHub Actions")
     print(f"Working directory: {os.getcwd()}")
     print(f"Script directory: {script_dir}")
     print(f"Repository root: {repo_root}")
     print(f"Public directory: {public_dir}")
-
-# We could also output the index.md to the public directory
-# Uncomment the next line if you want the index in the public directory instead
-# index_output_dir = public_dir
 
 for filename in os.listdir(public_dir):
     if (
@@ -76,14 +70,13 @@ for base_filename, file_versions in files_by_basename.items():
 
     if len(file_versions) == 1:
         filename = file_versions[0]
-        file_ext = os.path.splitext(filename)[1].lower()# The indentation is a bit off here, let's fix it and preserve the comment
+        file_ext = os.path.splitext(filename)[1].lower()
         format_indicator = ""
         if file_ext == ".pdf":
             format_indicator = " (PDF)"
         elif file_ext and file_ext != ".md":
             format_indicator = f" ({file_ext[1:].upper()})"
-        
-        # Jekyll will serve files at root level, so no need for public prefix
+
         index_content += f"- [{display_name}{format_indicator}]({filename})\n"
     else:
         index_content += f"- {display_name} ("
@@ -107,7 +100,6 @@ for base_filename, file_versions in files_by_basename.items():
 
 index_content += "\nReach me at [jobs@teetow.com](mailto:jobs@teetow.com)!\n\n"
 
-# Add last updated date
 current_date = datetime.datetime.now().strftime("%B %Y")
 index_content += f"## Last Updated\n\n{current_date}\n"
 

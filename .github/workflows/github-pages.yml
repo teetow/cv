@@ -27,16 +27,18 @@ jobs:
         with:
           python-version: '3.x'
           
-      - name: Generate index file
-        run: python generate_index.py
-        
       - name: Generate PDF files
         uses: baileyjm02/markdown-to-pdf@v1
         with:
-          input_path: cv.md
-          output_dir: ./
+          input_path: public
+          output_dir: ./public
           build_html: false
       
+      - name: Generate index file
+        run: |
+          cd scripts
+          python generate_index.py
+        
       - name: Setup Pages
         uses: actions/configure-pages@v5
         
