@@ -1,0 +1,101 @@
+name: GitHub Pages
+
+env:
+  ACT: false
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        if: ${{ env.ACT != 'true' }}
+        uses: actions/checkout@v4
+
+      - name: Generate PDF files
+        run: |
+          # Generate PDFs for all markdown files in the public directory
+          echo "Generating PDFs from markdown files"
+          
+          # Convert each markdown file to PDF
+          for md_file in public/*.md; do
+            basename=$(basename "$md_file" .md)
+            echo "Converting $md_file to public/$basename.pdf"
+            
+            docker run --rm \
+              -v "$(pwd):/workdir" \
+              -w /workdir \
+              pandoc/latex:latest \
+              -f markdown \
+              -t pdf \
+              "$md_file" \
+              -o "public/$basename.pdf"
+          done
+
+      - name: Generate index file
+        if: ${{ env.ACT != 'true' }}
+        run: |
+          cat > index.md << 'EOFILE'
+          ---
+          layout: default
+          title: Job Application Resources
+          ---
+
+          ## Available Documents
+
+          $(for file in public/*.md; do
+            name=$(basename "$file" .md)
+            display_name=$(echo "$name" | sed 's/_/ /g' | awk '{for(i=1;i<=NF;i++)sub(/./,toupper(substr($i,1,1)),$i)}1')
+            pdf_file="public/${name}.pdf"
+            if [ -f "$pdf_file" ]; then
+              echo "- $display_name ([View Online]($file) | [Download PDF]($pdf_file))"
+            else
+              echo "- [$display_name]($file)"
+            fi
+          done)
+
+          Reach me at [jobs@teetow.com](mailto:jobs@teetow.com)!
+          EOFILE
+
+      - name: Setup Pages
+        if: ${{ env.ACT != 'true' }}
+        uses: actions/configure-pages@v5
+
+      - name: Build with Jekyll
+        if: ${{ env.ACT != 'true' }}
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+
+      - name: Upload artifact
+        if: ${{ env.ACT != 'true' }}
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        if: ${{ env.ACT != 'true' }}
+        id: deployment
+        uses: actions/deploy-pages@v4

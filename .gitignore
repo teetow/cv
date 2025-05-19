@@ -1,0 +1,26 @@
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby / Jekyll
+.bundle/
+vendor/bundle/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Act local testing artifacts
+.act
+/act-artifacts/
+.secrets
+
+# VS Code
+.vscode/
+cv.code-workspace
+
+# Local configuration
+public/*.pdf
+

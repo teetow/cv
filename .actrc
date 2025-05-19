@@ -1,0 +1,10 @@
+--container-architecture linux/amd64
+--platform ubuntu-latest=catthehacker/ubuntu:act-latest
+
+-P ubuntu-latest=catthehacker/ubuntu:act-latest
+
+# Set some default environment variables for local testing
+--env RUNNER_TEMP=/tmp
+
+# Bind Docker socket
+--bind
