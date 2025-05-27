@@ -49,27 +49,8 @@ jobs:
       - name: Generate index file
         if: ${{ env.ACT != 'true' }}
         run: |
-          cat > index.md << 'EOFILE'
-          ---
-          layout: default
-          title: Job Application Resources
-          ---
-
-          ## Available Documents
-
-          $(for file in public/*.md; do
-            name=$(basename "$file" .md)
-            display_name=$(echo "$name" | sed 's/_/ /g' | awk '{for(i=1;i<=NF;i++)sub(/./,toupper(substr($i,1,1)),$i)}1')
-            pdf_file="public/${name}.pdf"
-            if [ -f "$pdf_file" ]; then
-              echo "- $display_name ([View Online]($file) | [Download PDF]($pdf_file))"
-            else
-              echo "- [$display_name]($file)"
-            fi
-          done)
-
-          Reach me at [jobs@teetow.com](mailto:jobs@teetow.com)!
-          EOFILE
+          chmod +x ./scripts/generate_index.sh
+          ./scripts/generate_index.sh
 
       - name: Setup Pages
         if: ${{ env.ACT != 'true' }}
