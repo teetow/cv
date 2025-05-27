@@ -1,15 +1,11 @@
 title: Johan Althoff - CV
 description: Professional resources
-theme: jekyll-theme-minimal
 baseurl: "/cv"
 url: "https://teetow.com"
 markdown: kramdown
-plugins:
-  - jekyll-relative-links
-relative_links:
-  enabled: true
-  collections: true
 include:
   - "*.md"
   - "*.pdf"
+  - "public/*.md"
+  - "public/*.pdf"
 favicon: /assets/favicon.svg

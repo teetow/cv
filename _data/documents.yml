@@ -1,0 +1,13 @@
+files:
+  - name: "cv"
+    display: "CV"
+    pdf_name: "johan_althoff_cv"
+    description: "Standard resume"
+  - name: "cv_long"
+    display: "CV Long"
+    pdf_name: "johan_althoff_cv_long"
+    description: "Detailed resume"
+  - name: "linkedin_profile"
+    display: "LinkedIn Profile"
+    pdf_name: "johan_althoff_linkedin_profile"
+    description: "LinkedIn export"

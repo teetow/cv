@@ -1,0 +1,11 @@
+services:
+  jekyll:
+    image: jekyll/jekyll:latest
+    command: jekyll serve --host 0.0.0.0 --livereload --force_polling
+    ports:
+      - "4000:4000"
+      - "35729:35729"  # LiveReload port
+    volumes:
+      - .:/srv/jekyll:Z
+    environment:
+      - JEKYLL_ENV=development

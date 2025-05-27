@@ -31,10 +31,10 @@ jobs:
           # Generate PDFs for all markdown files in the public directory
           echo "Generating PDFs from markdown files"
           
-          # Convert each markdown file to PDF
+          # Convert each markdown file to PDF with proper naming
           for md_file in public/*.md; do
             basename=$(basename "$md_file" .md)
-            echo "Converting $md_file to public/$basename.pdf"
+            echo "Converting $md_file to public/johan_althoff_$basename.pdf"
             
             docker run --rm \
               -v "$(pwd):/workdir" \
@@ -43,14 +43,8 @@ jobs:
               -f markdown \
               -t pdf \
               "$md_file" \
-              -o "public/$basename.pdf"
+              -o "public/johan_althoff_$basename.pdf"
           done
-
-      - name: Generate index file
-        if: ${{ env.ACT != 'true' }}
-        run: |
-          chmod +x ./scripts/generate_index.sh
-          ./scripts/generate_index.sh
 
       - name: Setup Pages
         if: ${{ env.ACT != 'true' }}
